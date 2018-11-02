@@ -9,10 +9,19 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Srividya Majeti | About Me</title>
+    <title>Srividya Majeti | Home</title>
 
 </head>
+<?php
 
+include 'views.php';
+
+?>
+<style> 
+    video::-webkit-media-controls-overlay-play-button {
+      display: none;
+    }
+</style>
 <body>
     <!-- Preloader -->
     <div id="preloader">
@@ -28,10 +37,8 @@
         </div>
     </div>
 
-    <!-- Gradient Background Overlay -->
-    <div class="gradient-background-overlay"></div>
 
-  
+   
   <!-- Header Area Start -->
     <header class="header-area bg-img" style="background-color: black">
         <div class="container-fluid h-100">
@@ -60,7 +67,7 @@
                                         <a class="nav-link" href="me-time.html">Me time</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="dance.php">Dance</a>
+                                        <a class="nav-link" href="dance.html">Dance</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="me-diaries.html">My Diaries</a>
@@ -73,40 +80,53 @@
             </div>
         </div>
     </header>
-    <!-- Header Area End -->
+    <!-- Header Area End  -->
 
-    <!-- Social Sidebar Area Start -->
-    <div class="social-sidebar-area">
-        <!-- Social Area -->
-        <div class="social-info-area">
-            <a href="https://www.facebook.com/profile.php?id=534674089" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a>
-            <a href="https://www.instagram.com/majeti_srividya/" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
-            <a href="https://www.pinterest.com/srividyamajeti/" data-toggle="tooltip" data-placement="right" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i> <span>Pinterest</span></a>
-            <a href="https://www.linkedin.com/in/majetisiri/" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i> <span>Linkedin</span></a>
-        </div>
-    </div>
-    <!-- Social Sidebar Area End -->
-
-    <!-- About Me Area Start -->
-    <section class="about-me-area mt-100 section_padding_100">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-offset-8">
-                    <div class="about-me-thumb">
-                        <img src="img/bg-img/s9.jpg" alt="" width="300px" height="300px">
-                    </div>
+    <!-- ***** Welcome Area Start ***** -->
+    <section class="blog-area mt-100">
+        <div class="row" style="margin-left: 4%;margin-right: 4%;">
+            <div style="padding: 20px;">
+                <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="1" class="videoPlayer" onclick="getVideoId(this)" width="400" controls controlsList="nodownload">
+                        <source src="img/dance/barso-re.mp4" type="video/mp4">
+                    </video>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        Barso re
+                        <p></p>
+                    </h5>
+                  </div>
                 </div>
-                <div class="col-10">
-                    <div class="about-content mt-100 mb-100 text-center">
-                        <span></span>
-                        <h2>What can I tell you about me?</h2>
-                        <h5>I think I have told you enough. If you want to know more about me, then I think we should meet :-p. </h5>
-                    </div>
+            </div>
+            <div style="padding: 20px;">
+                <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="2" class="videoPlayer" onclick="getVideoId(this)"  width="400" controls controlsList="nodownload">
+                  <source src="img/dance/jimmiki-kamal.MOV" type="video/mp4">
+                </video>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        Jimmiki Kamal
+                        <p></p>
+                    </h5>
+                  </div>
+                </div>
+            </div>
+            <div style="padding: 20px;">
+                <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="3" class="videoPlayer" onclick="getVideoId(this)"  width="400" controls controlsList="nodownload">
+                    <source src="img/dance/laila-main-laila.mp4" type="video/mp4">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        Laila main Laila
+                        <p></p>
+                    </h5>
+                  </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- About Me Area End -->
+    <!-- ***** Welcome Area End ***** -->
 
 
     <!-- Favicon  -->
@@ -117,6 +137,8 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive.min.css" rel="stylesheet">
+
+
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
@@ -127,7 +149,44 @@
     <script src="js/plugins.min.js"></script>
     <!-- Active js -->
     <script src="js/active.min.js"></script>
+    <script type="text/javascript">
+        function getVideoId($this){
+            if ($this.paused == false) {
+                $this.pause();
+                $this.firstChild.nodeValue = 'Play';
+            } else {
+                $this.play();
+                $this.firstChild.nodeValue = 'Pause';
+                $.ajax({
+                    url : "addView.php", 
+                    type : "POST",
+                    data: {"id":$this["id"]},
+                    success: function(response){
+                        $result=response;
+                    },
+                   async: false
+                });
+            }
+        }
 
+        $( document ).ready(function() {
+            $videos_arr=document.getElementsByClassName("videoPlayer");
+            for (i=0;i<$videos_arr.length;i++){
+                $id=$videos_arr[i]["id"]; 
+                $.ajax({
+                    url : "getViews.php", 
+                    type : "POST",
+                    data: {"id":$id},
+                    success: function(response){
+                        $result=response;
+                    },
+                   async: false
+                });
+                $elem=document.getElementById($id);
+                console.log($("#"+$id).siblings(".card-body").children().children().text($result+" views"));
+            }
+        });
+    </script>
 </body>
 
 </html>
