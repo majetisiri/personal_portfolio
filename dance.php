@@ -27,9 +27,9 @@ include 'views.php';
 
 ?>
 <style> 
-    video::-webkit-media-controls-overlay-play-button {
-      display: none;
-    }
+      video::-webkit-media-controls-overlay-play-button{
+                display: none !important;
+        }
 
     /* CSS used here will be applied after bootstrap.css */
 
@@ -42,14 +42,26 @@ include 'views.php';
   /*
   Small devices (landscape phones, 34em and up ( 544px ))
   */
-    @media (min-width: 34em) {
+    @media only screen
+          and (min-device-width: 320px)
+          and (max-device-width: 480px)
+          and (-webkit-min-device-pixel-ratio: 2)
+          and (orientation: portrait) {
         .card-columns {
             -webkit-column-count: 2;
             -moz-column-count: 2;
             column-count: 2;
         }
-        
+        .card{
+                max-width: 20rem;
+                max-height: 33rem;
+        }
+        .videoPlayer{
+                max-width: 16rem;
+                max-height:25rem;
+        }
     }
+
 
   /*
   Medium devices (tablets, 48em and up (768px))
