@@ -31,7 +31,7 @@ include 'views.php';
       display: none;
     }
 
-    * CSS used here will be applied after bootstrap.css */
+    /* CSS used here will be applied after bootstrap.css */
 
     .card {
         -webkit-column-count: 1;
@@ -43,7 +43,7 @@ include 'views.php';
   Small devices (landscape phones, 34em and up ( 544px ))
   */
     @media (min-width: 34em) {
-        .card {
+        .card-columns {
             -webkit-column-count: 2;
             -moz-column-count: 2;
             column-count: 2;
@@ -55,7 +55,7 @@ include 'views.php';
   Medium devices (tablets, 48em and up (768px))
   */
     @media (min-width: 48em) {
-        .card {
+        .card-columns {
             -webkit-column-count: 3;
             -moz-column-count: 3;
             column-count: 3;
@@ -67,7 +67,7 @@ include 'views.php';
   Large devices (desktops, 62em and up(992px) )
   */
     @media (min-width: 62em) {
-        .card {
+        .card-columns {
             -webkit-column-count: 6;
             -moz-column-count: 6;
             column-count: 6;
@@ -78,8 +78,8 @@ include 'views.php';
   /*
   Extra large devices (large desktops, 75em and up (1200px))
   */
-    @media (min-width: 75em ) {
-        .card {
+    @media (min-width: 75em) {
+        .card-columns {
             -webkit-column-count: 7;
             -moz-column-count: 7;
             column-count: 7;
