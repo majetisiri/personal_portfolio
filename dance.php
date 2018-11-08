@@ -27,10 +27,10 @@ include 'views.php';
 
 ?>
 <style> 
-      video::-webkit-media-controls-overlay-play-button{
+      /*video::-webkit-media-controls-overlay-play-button{
                 display: none !important;
-        }
-
+        }*/
+        
     /* CSS used here will be applied after bootstrap.css */
 
     .card {
@@ -163,7 +163,7 @@ include 'views.php';
         <div class="row" style="margin-left: 4%;margin-right: 4%;">
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="1" class="videoPlayer" onclick="getVideoId(this)" width="400" controls controlsList="nodownload">
+                  <video id="1" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
                         <source src="img/dance/barso-re.mp4" type="video/mp4">
                     </video>
                   <div class="card-body">
@@ -176,7 +176,7 @@ include 'views.php';
             </div>
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="2" class="videoPlayer" onclick="getVideoId(this)"  width="400" controls controlsList="nodownload">
+                  <video id="2" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
                   <source src="img/dance/jimmiki-kamal.MOV" type="video/mp4">
                 </video>
                   <div class="card-body">
@@ -189,7 +189,7 @@ include 'views.php';
             </div>
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="3" class="videoPlayer" onclick="getVideoId(this)"  width="400" controls controlsList="nodownload">
+                  <video id="3" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
                     <source src="img/dance/laila-main-laila.mp4" type="video/mp4">
                   </video>
                   <div class="card-body">
@@ -246,6 +246,10 @@ include 'views.php';
             } else {
                 $this.play();
                 $this.firstChild.nodeValue = 'Pause';
+            }
+        }
+
+        function addView($this){
                 $.ajax({
                     url : "addView.php", 
                     type : "POST",
@@ -255,7 +259,6 @@ include 'views.php';
                     },
                    async: false
                 });
-            }
         }
 
         $( document ).ready(function() {
