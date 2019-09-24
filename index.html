@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128566543-1"></script>
@@ -18,8 +19,140 @@
     </script>
 
     <!-- Title  -->
-    <title>Srividya Majeti | Home</title>
+<style>
+.circle {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+}
 
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 170px;
+    height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+.nameHead{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+    color: black;
+    text-align: center;
+}
+
+
+.circlePadding{
+    padding-right: 40px;
+}
+
+.myProfilePic{
+    width:500px; 
+    height:700px;
+}
+
+@media only screen and (max-width: 600px) {
+    .nameHead{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 40px;
+        color: black;
+        text-align: center;
+    }
+
+    .myProfilePic{
+        width:250px; 
+        height:250px;
+        padding-left: 80px;
+    }
+
+    .flip-container{
+        padding-left: 40px;
+    }
+
+    .circle {
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin: 0.5em auto;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-border-radius: 99em;
+      -moz-border-radius: 99em;
+      border-radius: 99em;
+      border: 5px solid #eee;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+    }
+
+    .about-content{
+        padding-top: 40px;
+    }
+
+
+    .flip-container, .front, .back {
+        width: 170px;
+        height: 200px;
+    }
+
+    /* hide back of pane during swap */
+    .back {
+        display: none;
+    }
+
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(0deg);
+    }
+
+
+}
+</style>
+    <title>Srividya Majeti | About Me</title>
 
 </head>
 
@@ -38,251 +171,162 @@
         </div>
     </div>
 
-    <!-- Gradient Background Overlay -->
-    <div class="gradient-background-overlay"></div>
-
-   
-  <!-- Header Area Start -->
-    <header class="header-area bg-img" style="background-color: black">
-        <div class="container-fluid h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 h-100">
-                    <div class="main-menu h-100">
-                        <nav class="navbar h-100 navbar-expand-lg">
-                            <!-- Logo Area  -->
-                            <a class="navbar-brand" href="index.html" style="color: white"><strong>Srividya Majeti</strong></a>
-
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu</button>
-
-                            <div class="collapse navbar-collapse" id="studioMenu">
-                                <!-- Menu Area Start  -->
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="about-me.html">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="travel.html">Travel</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="me-time.html">Me time</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="dance.php">Dance</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="me-diaries.html">My Diaries</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  
+    <!-- Header Area Start -->
+        <p class="nameHead"> Srividya Majeti</p><br><br>
     <!-- Header Area End -->
 
- <!-- Social Sidebar Area Start -->
+    <!-- Social Sidebar Area Start -->
     <div class="social-sidebar-area">
         <!-- Social Area -->
         <div class="social-info-area">
-            <a href="https://www.facebook.com/profile.php?id=534674089" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a>
-            <a href="https://www.instagram.com/majeti_srividya/" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
-            <a href="https://www.pinterest.com/srividyamajeti/" data-toggle="tooltip" data-placement="right" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i> <span>Pinterest</span></a>
-            <a href="https://www.linkedin.com/in/majetisiri/" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i> <span>Linkedin</span></a>
+            <a href="https://www.facebook.com/profile.php?id=534674089"  target="_blank" data-toggle="tooltip" data-placement="right" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Facebook</span></a>
+            <a href="https://www.instagram.com/majeti_srividya/" target="_blank"  data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
+            <a href="https://www.pinterest.com/srividyamajeti/" target="_blank"  data-toggle="tooltip" data-placement="right" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i> <span>Pinterest</span></a>
+            <a href="https://www.linkedin.com/in/majetisiri/" target="_blank" data-toggle="tooltip" data-placement="right" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i> <span>Linkedin</span></a>
         </div>
     </div>
     <!-- Social Sidebar Area End -->
-    
-    <!-- ***** Welcome Area Start ***** -->
-    <section class="welcome-area">
-        <div class="carousel h-100 slide" data-ride="carousel" id="welcomeSlider">
-            <!-- Carousel Inner -->
-            <div class="carousel-inner h-100">
 
-                <div class="carousel-item h-100 bg-img active" style="background-image: url(img/bg-img/m3.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>01.</span>
-                            <h2>Har pal yahan jee bhar jiyo<br>
-                                Jo hai sama, kal ho na ho</h2>
-                        </div>
+    <!-- About Me Area Start -->
+    <section class="about-me-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="about-me-thumb">
+                        <img src="img/bg-img/s9.jpg" alt="" class="myProfilePic">
                     </div>
                 </div>
-
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m9.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>02.</span>
-                            <h2> My family is my strength and my weakness.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/me-time/15.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>03.</span>
-                            <h2> Believe you can fly</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m2.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>04.</span>
-                            <h2> Love Yourself</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m4.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>05.</span>
-                            <h2> Every sunset brings the promise of a new dawn.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/n15.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>06.</span>
-                            <h2> Take time to make your soul happy.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m10.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>07.</span>
-                            <h2>Always better together. </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m11.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>08.</span>
-                            <h2>Friends become our chosen family.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m12.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>09.</span>
-                            <h2>  I know I am not perfect but I am original.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m13.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>10.</span>
-                            <h2>When I'm falling my girlfriends are my soft landing.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m14.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>11.</span>
-                            <h2>The hardest thing is not talking to someone you used to talk to everyday.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m16.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>12.</span>
-                            <h2>Friends buy you food. Best friends eat your food.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m15.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>13.</span>
-                            <h2> Life is too short to worry about everything.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/m17.jpg);">
-                    <div class="carousel-content h-100">
-                        <div class="slide-text">
-                            <span>14.</span>
-                            <h2> It's time to start living the life you've imagined.</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Carousel Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#welcomeSlider" data-slide-to="0" class="active bg-img" style="background-image: url(img/bg-img/m3.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="1" class="bg-img" style="background-image: url(img/bg-img/m9.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="2" class="bg-img" style="background-image: url(img/me-time/15.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="3" class="bg-img" style="background-image: url(img/bg-img/m2.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="4" class="bg-img" style="background-image: url(img/bg-img/m4.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="5" class="bg-img" style="background-image: url(img/bg-img/n15.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="6" class="bg-img" style="background-image: url(img/bg-img/m10.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="7" class="bg-img" style="background-image: url(img/bg-img/m11.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="8" class="bg-img" style="background-image: url(img/bg-img/m12.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="9" class="bg-img" style="background-image: url(img/bg-img/m13.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="10" class="bg-img" style="background-image: url(img/bg-img/m14.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="11" class="bg-img" style="background-image: url(img/bg-img/m16.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="12" class="bg-img" style="background-image: url(img/bg-img/m15.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="13" class="bg-img" style="background-image: url(img/bg-img/m17.jpg);"></li>
-            </ol>
-        </div>
-    </section>
-    <!-- ***** Welcome Area End ***** -->
-
-    <!-- ***** Contact Area Start ***** -->
-    <div class="contact-popup-form" id="contact-modal-lg">
-        <div class="modal fade contact-modal-lg" tabindex="-1" role="dialog" aria-labelledby="contact-modal-lg" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="container-fluid">
+                <div class="col-md-6">
+                    <div class="about-content text-center">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="contact-heading-text text-center mb-30">
-                                    <span></span>
-                                    <h2>Please get in touch</h2>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class='circlePadding'>
+                                            <a href="dance.php"><div class="circle" style="background-image: url('img/highlights/dance.jpg')">
+                                            </div></a>
+                                            <p style="text-align: center;"><i>Dance</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class='circlePadding'>
+                                            <a href="dance.php"><div class="circle" style="background:#faeddd; color:black;text-align: center;"><br><br><i>Click here for my dance videos</i></div></a>
+                                            <p style="text-align: center;"><i>Dance</i></p>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class='circlePadding'>
+                                            <a href="travel.html"><div class="circle" style="background-image: url('img/highlights/travel.jpg')">
+                                            </div></a>
+                                            <p style="text-align: center;"><i>Travel</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class='circlePadding'>
+                                            <a href="travel.html"><div class="circle" style="background:#000000; color:white; text-align: center;"><br><br>Click here for my trips</div></a>
+                                            <p style="text-align: center;"><i>Travel</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class='circlePadding'>
+                                            <a href="me-time.html"><div class="circle" style="background-image: url('img/highlights/me-time.jpg')">
+                                            </div></a>
+                                            <p style="text-align: center;"><i>ME Time</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class='circlePadding'>
+                                            <a href="me-time.html"><div class="circle" style="background:#e37473; color:black;text-align: center;"><br><br><i>Click here for my drawing and adventures.</i></div></a>
+                                            <p style="text-align: center;"><i>ME Time</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class='circlePadding'>
+                                            <a href="https://www.goodreads.com/user/show/86406146-srividya-majeti"><div class="circle" style="background-image: url('img/highlights/books.jpg')">
+                                            </div></a>
+                                            <p style="text-align: center;"><i>Reading</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class='circlePadding'>
+                                            <a href="https://www.goodreads.com/user/show/86406146-srividya-majeti"><div class="circle" style="background:#b1507b; color:white;text-align: center;"><br><br>Click here to view books I read</div></a>
+                                            <p style="text-align: center;"><i>Reading</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class='circlePadding'>
+                                            <a href="my-playlist.html"><div class="circle" style="background-image: url('img/highlights/on-my-playlist1.jpg')">
+                                            </div></a>
+                                            <p style="text-align: center;"><i>My Playlist</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class='circlePadding'>
+                                            <a href="my-playlist.html"><div class="circle" style="background:#b19dc2; color:black;text-align: center;"><br><br>Click here to view my playlist</div></a>
+                                            <p style="text-align: center;"><i>My Playlist</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div class="flip-container" ontouchstart="this.classList.toggle('hover ');">
+                                <div class="flipper">
+                                    <div class="front">
+                                        <!-- front content -->
+                                        <div class='circlePadding'>
+                                            <a href="me-diaries.html"><div class="circle" style="background-image: url('img/highlights/diaries.jpg')">
+                                            </div></a>
+                                            <p style="text-align: center;"><i>My Diaries</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <!-- back content -->
+                                        <div class='circlePadding'>
+                                            <a href="me-diaries.html"><div class="circle" style="background:#9c8a62; color:black;text-align: center;"><br><br>Click here to view my people</div></a>
+                                            <p style="text-align: center;"><i>My Diaries</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <br>
+                                <span></span>
+                                <h2>What can I tell you about me?</h2>
+                                <h5>I think I have told you enough. If you want to know more about me, then I think we should meet :-p. </h5>
                             </div>
                         </div>
                     </div>
-                    <!-- Contact Form Area -->
-                    <div class="contact-form-area">
-                        <div class="container-fluid">
-                            <form action="#" method="post">
-                                <div class="row">
-                                    <div class="col-12 col-md-4">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="col-12 text-center">
-                                        <button type="submit" class="btn studio-btn mt-3"><img src="img/core-img/logo-icon.png" alt=""> Send</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ***** Contact Area End ***** -->
+    </section>
+    <!-- About Me Area End -->
+
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -292,7 +336,6 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive.min.css" rel="stylesheet">
-
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->

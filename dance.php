@@ -60,6 +60,10 @@ include 'views.php';
                 max-width: 16rem;
                 max-height:25rem;
         }
+
+        .videoCont{
+            margin-left: 10%;
+        }
     }
 
 
@@ -160,7 +164,7 @@ include 'views.php';
 
     <!-- ***** Welcome Area Start ***** -->
     <section class="blog-area mt-100">
-        <div class="row" style="margin-left: 4%;margin-right: 4%;">
+        <div class="row videoCont" style="margin-left: 25%">
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
                   <video id="1" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
@@ -188,8 +192,8 @@ include 'views.php';
                 </div>
             </div>
             <div style="padding: 20px;">
-                <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="3" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
+                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="3" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="900" controls controlsList="nodownload">
                     <source src="img/dance/laila-main-laila.mp4" type="video/mp4">
                   </video>
                   <div class="card-body">
@@ -200,9 +204,22 @@ include 'views.php';
                   </div>
                 </div>
             </div>
+            <div style="padding: 20px;">
+                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="4" class="videoPlayer" onclick="getVideoId(this)"  width="900" controls controlsList="nodownload">
+                    <source src="img/dance/krishna_thodeyam.MOV" type="video/mp4">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        Krishna Thodeyam -(Bhartanatyam)
+                        <p></p>
+                    </h5>
+                  </div>
+                </div>
+            </div>
             <!-- <div style="padding: 20px;">
-                <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="3" class="videoPlayer" onclick="getVideoId(this)"  width="400" controls controlsList="nodownload">
+                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="5" class="videoPlayer" onclick="getVideoId(this)"  width="900" controls controlsList="nodownload">
                     <source src="img/dance/shape-of-you.mp4" type="video/mp4">
                   </video>
                   <div class="card-body">
