@@ -9,6 +9,27 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128566543-1"></script>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive.min.css" rel="stylesheet">
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script async src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- Popper js -->
+    <script async src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script async src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script async src="js/plugins.min.js"></script>
+    <!-- Active js -->
+    <script async src="js/active.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -16,26 +37,47 @@
 
       gtag('config', 'UA-128566543-1');
     </script>
+    <style>
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+          flex: 25%;
+          max-width: 25%;
+          padding: 0 4px;
+        }
+
+        .column img {
+          margin-top: 8px;
+          vertical-align: middle;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+          .column {
+            flex: 50%;
+            max-width: 50%;
+          }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            flex: 100%;
+            max-width: 100%;
+          }
+        }
+    </style>
     <!-- Title  -->
     <title>Srividya Majeti | Portfolio</title>
 
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="showbox">
-            <div class="loader">
-                <svg class="circular" viewBox="25 25 50 50">
-                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                </svg>
-            </div>
-        </div>
-        <div class="questions-area text-center">
-            <p>Welcome to Srividya Majeti's page!</p>
-        </div>
-    </div>
-
     <!-- Gradient Background Overlay -->
     <div class="gradient-background-overlay"></div>
 
@@ -96,409 +138,99 @@
     <!-- Social Sidebar Area End -->
 
     <!-- Project Area Start -->
-    <div class="gallery_area clearfix">
-        <div class="container-fluid clearfix">
-            <div class="gallery_menu">
-                <div class="portfolio-menu">
-                    <button class="active btn" type="button" data-filter="*">All</button>
-                    <button class="btn" type="button" data-filter=".doodling">Doodling</button>
-                    <button class="btn" type="button" data-filter=".canvas">Canvas Painting</button>
-                    <button class="btn" type="button" data-filter=".kayak">Kayaking & Tube ride</button>
-                    <button class="btn" type="button" data-filter=".cave">Caving</button>
-                    <button class="btn" type="button" data-filter=".crafts">Crafts</button>
-                    <button class="btn" type="button" data-filter=".snow_tubing">Snow Tubing</button>
-                    <button class="btn" type="button" data-filter=".skii">Skiing</button>
-                    <button class="btn" type="button" data-filter=".hike">Hiking</button>
-                    <button class="btn" type="button" data-filter=".zip">Ziplining</button>
-                    <button class="btn" type="button" data-filter=".draw">Drawing</button>
-                    <button class="btn" type="button" data-filter=".para">Parasailing</button>
-                </div>
-            </div>
-
-            <div class="row portfolio-column">
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item hike">
-                    <img src="img/me-time/h1.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/h1.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item hike">
-                    <img src="img/me-time/h2.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/h2.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item hike">
-                    <img src="img/me-time/h4.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/h4.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item snow_tubing">
-                    <img src="img/me-time/st.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/st.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item canvas">
-                    <img src="img/me-time/1.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/1.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item kayak">
-                    <img src="img/bg-img/f1.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/f1.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item zip">
-                    <img src="img/me-time/2.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/2.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item zip">
-                    <img src="img/me-time/3.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/3.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item para">
-                    <img src="img/me-time/4.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/4.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item canvas">
-                    <img src="img/me-time/5.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/5.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/6.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/6.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/7.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/7.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/8.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/8.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/9.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/9.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/10.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/10.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/11.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/11.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/12.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/12.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/13.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/13.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item draw">
-                    <img src="img/me-time/14.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/14.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item hike">
-                    <img src="img/me-time/15.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/15.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item snow_tubing">
-                    <img src="img/me-time/16.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/16.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item para">
-                    <img src="img/me-time/17.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/17.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/18.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/18.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/19.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/19.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/20.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/20.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/21.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/21.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/22.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/22.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/23.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/23.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/24.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/24.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/25.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/25.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/26.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/26.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item doodling">
-                    <img src="img/me-time/27.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/27.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item cave">
-                    <img src="img/me-time/28.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/28.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item cave">
-                    <img src="img/me-time/30.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/30.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item cave">
-                    <img src="img/me-time/31.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/31.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item hike">
-                    <img src="img/me-time/32.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/32.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item skii">
-                    <img src="img/me-time/33.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/33.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item kayak">
-                    <img src="img/me-time/34.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/34.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- crafts -->
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c1.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c1.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c2.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c2.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c3.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c3.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c4.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c4.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c5.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c5.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c6.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c6.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c7.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c7.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c8.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c8.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c9.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c9.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c10.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c10.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item crafts">
-                    <img src="img/me-time/c11.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/me-time/c11.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div>
+    <div class="gallery_area">
+    <div class="gallery_menu">
+        <div class="portfolio-menu">
+            <button class="active btn filter all" type="button" data-filter="*">All</button>
+            <button class="btn filter" type="button" data-filter=".doodling">Doodling</button>
+            <button class="btn filter" type="button" data-filter=".canvas">Canvas Painting</button>
+            <button class="btn filter" type="button" data-filter=".kayak">Kayaking & Tube ride</button>
+            <button class="btn filter" type="button" data-filter=".cave">Caving</button>
+            <button class="btn filter" type="button" data-filter=".crafts">Crafts</button>
+            <button class="btn filter" type="button" data-filter=".snow_tubing">Snow Tubing</button>
+            <button class="btn filter" type="button" data-filter=".skii">Skiing</button>
+            <button class="btn filter" type="button" data-filter=".hike">Hiking</button>
+            <button class="btn filter" type="button" data-filter=".zip">Ziplining</button>
+            <button class="btn filter" type="button" data-filter=".draw">Drawing</button>
+            <button class="btn filter" type="button" data-filter=".para">Parasailing</button>
         </div>
     </div>
+    <div class="row"> 
+      <div class="column">
+        <img class="canvas" src="img/me-time/1.jpg">
+        <img class="zip" src="img/me-time/2.jpg">
+        <img class="draw" src="img/me-time/6.jpg">
+        <img class="draw" src="img/me-time/7.jpg">
+        <img class="hike" src="img/me-time/h4.jpg">
+        <img class="para" src="img/me-time/4.jpg">
+        <img class="doodling"src="img/me-time/10.jpg">
+        <img class="hike" src="img/me-time/h1.jpg">
+        <img class="snow_tubing" src="img/me-time/16.jpg">
+        <img class="kayak" src="img/bg-img/f1.jpg">
+        <img class="cave" src="img/me-time/28.jpg">
+        <img class="skii" src="img/me-time/33.jpg">
+        <img class="doodling" src="img/me-time/27.jpg">
+        <img class="crafts" src="img/me-time/c1.jpg">
+        <img class="crafts" src="img/me-time/c8.jpg">
+      </div>
+      <div class="column">
+        <img class="canvas" src="img/me-time/5.jpg">
+        <img class="zip" src="img/me-time/3.jpg">
+        <img class="draw" src="img/me-time/8.jpg">
+        <img class="draw" src="img/me-time/9.jpg">
+        <img class="para" src="img/me-time/17.jpg">
+        <img class="hike" src="img/me-time/h2.jpg">
+        <img class="snow_tubing" src="img/me-time/st.jpg">
+        <img class="cave" src="img/me-time/30.jpg">
+        <img class="doodling" src="img/me-time/21.jpg">
+        <img class="doodling" src="img/me-time/18.jpg"
+        <img class="doodling" src="img/me-time/22.jpg">
+        <img class="kayak" src="img/me-time/34.jpg">
+        <img class="crafts" src="img/me-time/c3.jpg">
+        <img class="crafts" src="img/me-time/c4.jpg">
+        <img class="crafts" src="img/me-time/c5.jpg">
+      </div> 
+      <div class="column">
+        <img class="hike" src="img/me-time/15.jpg">
+        <img class="draw" src="img/me-time/13.jpg">
+        <img class="cave" src="img/me-time/31.jpg">
+        <img class="draw" src="img/me-time/14.jpg">
+        <img class="doodling" src="img/me-time/19.jpg">
+        <img class="doodling" src="img/me-time/20.jpg">
+        <img class="doodling" src="img/me-time/26.jpg">
+        <img class="crafts" src="img/me-time/c6.jpg">
+        <img class="crafts" src="img/me-time/c7.jpg">
+        <img class="crafts" src="img/me-time/c2.jpg">
+      </div>
+      <div class="column">
+        <img class="draw" src="img/me-time/11.jpg">
+        <img class="hike" src="img/me-time/32.jpg">
+        <img class="draw" src="img/me-time/12.jpg">
+        <img class="doodling" src="img/me-time/23.jpg">
+        <img class="doodling" src="img/me-time/24.jpg">
+        <img class="doodling" src="img/me-time/25.jpg">
+        <img class="crafts" src="img/me-time/c9.jpg">
+        <img class="crafts" src="img/me-time/c10.jpg">
+        <img class="crafts" src="img/me-time/c11.jpg">
+      </div>
+    </div>
     <!-- Project Area End -->
-
-
-    <!-- Favicon  -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Core Style CSS -->
-    <link rel="stylesheet" href="css/core-style.min.css">
-
-    <!-- Responsive CSS -->
-    <link href="css/responsive.min.css" rel="stylesheet">
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.min.js"></script>
-    <!-- Active js -->
-    <script src="js/active.min.js"></script>
-
+   
+</div>
 </body>
-
+<script type="text/javascript">
+    $(".filter").click(function(){
+        var filter="img"+$(this).attr("data-filter");
+        if (filter=="img.all"){
+            $("img").show();
+        }else{
+            $(".filter").removeClass("active");
+            $(this).addClass("active");
+            $("img").hide();
+            $(filter).show();
+            $(filter).addClass("animated zoomIn");
+            
+        }
+    })
+</script>
 </html>

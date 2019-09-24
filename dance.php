@@ -27,11 +27,11 @@ include 'views.php';
 
 ?>
 <style> 
-    video::-webkit-media-controls-overlay-play-button {
-      display: none;
-    }
-
-    * CSS used here will be applied after bootstrap.css */
+      /*video::-webkit-media-controls-overlay-play-button{
+                display: none !important;
+        }*/
+        
+    /* CSS used here will be applied after bootstrap.css */
 
     .card {
         -webkit-column-count: 1;
@@ -42,20 +42,32 @@ include 'views.php';
   /*
   Small devices (landscape phones, 34em and up ( 544px ))
   */
-    @media (min-width: 34em) {
-        .card {
+    @media only screen
+          and (min-device-width: 320px)
+          and (max-device-width: 480px)
+          and (-webkit-min-device-pixel-ratio: 2)
+          and (orientation: portrait) {
+        .card-columns {
             -webkit-column-count: 2;
             -moz-column-count: 2;
             column-count: 2;
         }
-        
+        .card{
+                max-width: 20rem;
+                max-height: 33rem;
+        }
+        .videoPlayer{
+                max-width: 16rem;
+                max-height:25rem;
+        }
     }
+
 
   /*
   Medium devices (tablets, 48em and up (768px))
   */
     @media (min-width: 48em) {
-        .card {
+        .card-columns {
             -webkit-column-count: 3;
             -moz-column-count: 3;
             column-count: 3;
@@ -67,7 +79,7 @@ include 'views.php';
   Large devices (desktops, 62em and up(992px) )
   */
     @media (min-width: 62em) {
-        .card {
+        .card-columns {
             -webkit-column-count: 6;
             -moz-column-count: 6;
             column-count: 6;
@@ -78,8 +90,8 @@ include 'views.php';
   /*
   Extra large devices (large desktops, 75em and up (1200px))
   */
-    @media (min-width: 75em ) {
-        .card {
+    @media (min-width: 75em) {
+        .card-columns {
             -webkit-column-count: 7;
             -moz-column-count: 7;
             column-count: 7;
@@ -151,7 +163,7 @@ include 'views.php';
         <div class="row" style="margin-left: 4%;margin-right: 4%;">
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="1" class="videoPlayer" onclick="getVideoId(this)" width="400" controls controlsList="nodownload">
+                  <video id="1" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" preload="true" controls controlsList="nodownload">
                         <source src="img/dance/barso-re.mp4" type="video/mp4">
                     </video>
                   <div class="card-body">
@@ -164,7 +176,7 @@ include 'views.php';
             </div>
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="2" class="videoPlayer" onclick="getVideoId(this)"  width="400" controls controlsList="nodownload">
+                  <video id="2" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
                   <source src="img/dance/jimmiki-kamal.MOV" type="video/mp4">
                 </video>
                   <div class="card-body">
@@ -177,7 +189,7 @@ include 'views.php';
             </div>
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="3" class="videoPlayer" onclick="getVideoId(this)"  width="400" controls controlsList="nodownload">
+                  <video id="3" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
                     <source src="img/dance/laila-main-laila.mp4" type="video/mp4">
                   </video>
                   <div class="card-body">
@@ -234,6 +246,10 @@ include 'views.php';
             } else {
                 $this.play();
                 $this.firstChild.nodeValue = 'Pause';
+            }
+        }
+
+        function addView($this){
                 $.ajax({
                     url : "addView.php", 
                     type : "POST",
@@ -243,7 +259,6 @@ include 'views.php';
                     },
                    async: false
                 });
-            }
         }
 
         $( document ).ready(function() {
