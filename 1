@@ -27,9 +27,7 @@ include 'views.php';
 
 ?>
 <style> 
-	body{
-		overflow-x: hidden !important;
-	}
+
   	.videoCont{
         	margin-left:25% !important;
     	 }
@@ -143,25 +141,21 @@ include 'views.php';
                                     <li class="nav-item active">
                                         <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                                     </li>
-                                    <!--<li class="nav-item">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="about-me.html">About</a>
-                                    </li>-->
-                                    <!--<li class="nav-item">
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="nav-link" href="travel.html">Travel</a>
-                                    </li>-->
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="me-time.html">Me time</a>
                                     </li>
-       				<li class="nav-item">
-                                        <a class="nav-link" href="https://www.goodreads.com/user/show/86406146-srividya-majeti">Reading</a>
-                                    </li>
-
                                     <li class="nav-item">
                                         <a class="nav-link" href="dance.html">Dance</a>
                                     </li>
-                                    <!--<li class="nav-item">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="me-diaries.html">My Diaries</a>
-                                    </li>-->
+                                    </li>
                                 </ul>
                             </div>
                         </nav>
@@ -175,62 +169,9 @@ include 'views.php';
     <!-- ***** Welcome Area Start ***** -->
     <section class="blog-area mt-100">
         <div class="row videoCont">
-	<div style="padding: 20px;">
-                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="6" class="videoPlayer" onclick="getVideoId(this)"  onplay="addView(this)"  width="900" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/1.jpg">
-                    <source src="https://s3.amazonaws.com/siri-personalwebsite/snehsangeeth.MP4" type="video/mp4">
-                  </video>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                        Sangeeth Choreo
-                        <p></p>
-                    </h5>
-                  </div>
-                </div>
-            </div>
-	      
-	<div style="padding: 20px;">
-                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="5" class="videoPlayer" onclick="getVideoId(this)"  onplay="addView(this)" width="900" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/IMG_1761.jpg">
-                    <source src="https://siri-personalwebsite.s3.amazonaws.com/shape-of-you.mov" type="video/mp4">
-                  </video>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                        Shape of you- Classical
-                        <p></p>
-                    </h5>
-                  </div>
-                </div>
-            </div>
-           <div style="padding: 20px;">
-                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="3" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="900" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/IMG_5995.PNG">
-                    <source src="https://s3.amazonaws.com/siri-personalwebsite/laila-main-laila.mp4" type="video/mp4">
-                  </video>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                        Laila main Laila
-                        <p></p>
-                    </h5>
-                  </div>
-                </div>
-            </div>
             <div style="padding: 20px;">
-                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="4" class="videoPlayer" onclick="getVideoId(this)"  onplay="addView(this)"  width="900" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/IMG_5996.PNG">
-                    <source src="https://s3.amazonaws.com/siri-personalwebsite/krishna_thodeyam.mp4" type="video/mp4">
-                  </video>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                        Krishna Thodeyam -(Bhartanatyam)
-                        <p></p>
-                    </h5>
-                  </div>
-                </div>
-            </div>
-	    <div style="padding: 20px">
-	 	<div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="1" preload="yes"  class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/IMG_5994.PNG">
+                <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="1" preload="yes"  class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload" poster="img/bg-img/1.jpg">
                         <source src="img/dance/barso-re.mp4" type="video/mp4">
                     </video>
                   <div class="card-body">
@@ -243,7 +184,7 @@ include 'views.php';
             </div>
             <div style="padding: 20px;">
                 <div class="card" style="width: 28rem;padding-left: 20px;padding-right: 20px;">
-                  <video id="2" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/IMG_5997.PNG">
+                  <video id="2" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="400" controls controlsList="nodownload">
                   <source src="img/dance/jimmiki-kamal.MOV" type="video/mp4">
                 </video>
                   <div class="card-body">
@@ -253,7 +194,46 @@ include 'views.php';
                     </h5>
                   </div>
                 </div>
-            </div> 
+            </div>
+            <div style="padding: 20px;">
+                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="3" class="videoPlayer" onclick="getVideoId(this)" onplay="addView(this)" width="900" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/IMG_0428.JPG">
+                    <source src="https://s3.amazonaws.com/siri-personalwebsite/laila-main-laila.mp4" type="video/mp4">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        Laila main Laila
+                        <p></p>
+                    </h5>
+                  </div>
+                </div>
+            </div>
+            <div style="padding: 20px;">
+                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="4" class="videoPlayer" onclick="getVideoId(this)"  onplay="addView(this)"  width="900" controls controlsList="nodownload" poster="https://s3.amazonaws.com/siri-personalwebsite/85384c97-bd2c-4098-838e-3d82f6018094.jpg">
+                    <source src="https://s3.amazonaws.com/siri-personalwebsite/krishna_thodeyam.mp4" type="video/mp4">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        Krishna Thodeyam -(Bhartanatyam)
+                        <p></p>
+                    </h5>
+                  </div>
+                </div>
+            </div>
+            <!-- <div style="padding: 20px;">
+                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
+                  <video id="5" class="videoPlayer" onclick="getVideoId(this)"  width="900" controls controlsList="nodownload">
+                    <source src="img/dance/shape-of-you.mp4" type="video/mp4">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        Shape of you- Classical
+                        <p></p>
+                    </h5>
+                  </div>
+                </div>
+            </div> -->
         </div>
     </section>
     <!-- ***** Welcome Area End ***** -->
