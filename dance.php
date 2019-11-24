@@ -180,10 +180,10 @@
                   </div>
                </div>
             </div>
-            <!-- <div style="padding: 20px;">
+            <div style="padding: 20px;">
                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
                   <video id="8" class="videoPlayer" onclick="getVideoId(this)"  onplay="addView(this)"  width="900" controls controlsList="nodownload" poster="https://siri-personalwebsite.s3.amazonaws.com/IMG_5192.JPG">
-                     <source src="https://siri-personalwebsite.s3.amazonaws.com/chair-dance.mp4" type="video/mp4">
+                     <source src="https://siri-personalwebsite.s3.amazonaws.com/aish_dance.mov" type="video/mp4">
                   </video>
                   <div class="card-body">
                      <h5 class="card-title">
@@ -192,7 +192,7 @@
                      </h5>
                   </div>
                </div>
-            </div> -->
+            </div>
             <!-- <div style="padding: 20px;">
                <div class="card" style="width: 59rem;padding-left: 20px;padding-right: 20px;">
                   <video id="7" class="videoPlayer" onclick="getVideoId(this)"  onplay="addView(this)"  width="900" controls controlsList="nodownload" poster="https://siri-personalwebsite.s3.amazonaws.com/IMG_5110.jpg">
